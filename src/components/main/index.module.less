@@ -1,0 +1,58 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 36px;
+    padding-bottom: 42px;
+    flex-grow: 1; // 该组件所在的父级是flex布局
+}
+
+.toolbar {
+    width: 100%;
+    outline: 2px solid blue;
+}
+
+.canvas-container {
+    position: relative;
+    margin: auto;
+}
+
+.btn-clip {
+    position: absolute;
+    display: none;
+    z-index: 10;
+    // width: 80px;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .15);
+    color: var(--bjh-pic-editor-theme-color);
+
+    .icon {
+        margin-right: 4px;
+        vertical-align: text-bottom;
+    }
+
+    &:active {
+        opacity: .8;
+        user-select: none;
+    }
+}
+
+.loading {
+    position: absolute;
+    display: none;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 50px;
+    border-radius: 4px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+}

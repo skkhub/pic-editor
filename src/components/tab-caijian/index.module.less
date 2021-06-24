@@ -1,0 +1,83 @@
+.container {
+    // outline: 1px solid red;
+    // display: flex;
+    // flex-flow: row wrap;
+    // justify-content: flex-start;
+    overflow: auto;
+    height: 100%;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.li {
+    // outline: 1px solid blue;
+    float: left;
+    width: 104px;
+    height: 92px;
+    padding: 4px;
+    // &:hover {
+    //     background-color: #fafafa;
+    // }
+}
+
+.example {
+    // max-height: 54px;
+    // max-width: 54px;
+    // border: 1px solid #999;
+    background: #f7f8f9;
+    border-radius: 4px;
+    margin: auto;
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+        border: 1px solid var(--bjh-pic-editor-theme-color);
+        color: var(--bjh-pic-editor-theme-color);
+        // border: 1px solid #f04142;
+        // background-color: #fff2f2;
+    }
+}
+
+.name {
+    padding-top: 8px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.custom-scroll-bar {
+    margin-right: -6px;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        // width: 2px;
+        height: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &::-webkit-scrollbar-button {
+        // display: none;
+        // height: 0px;
+        // width: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(17, 34, 51, 0.12);
+        background-clip: padding-box;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        border-radius: 6px;
+        min-height: 36px;
+    }
+}

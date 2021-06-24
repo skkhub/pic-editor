@@ -1,0 +1,95 @@
+/**
+* @file reset
+* @author sunkeke
+* @date 2020-12-11
+*/
+
+.bjh-pic-editor {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        word-break: break-all;
+        -webkit-tap-highlight-color: transparent; // hack IOS点击闪烁问题
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+        user-select: none;
+    }
+
+    // html,
+    // body {
+    //     -webkit-overflow-scrolling: touch;
+    //     padding-top: .1px;
+    //     font-size: initial; // 有些页面局部使用rem布局，会更改html字体，防止影响其他页面，这里给个默认的font-size，主要是设置给body的
+    //     margin: 0;
+    //     height: 100%;
+    //     font-family:
+    //         -apple-system,
+    //         "BlinkMacSystemFont",
+    //         "Segoe UI",
+    //         "Roboto",
+    //         "Oxygen",
+    //         "Ubuntu",
+    //         "Cantarell",
+    //         "Fira Sans",
+    //         "Droid Sans",
+    //         "Helvetica Neue",
+    //         sans-serif;
+    //     -webkit-font-smoothing: antialiased;
+    //     -moz-osx-font-smoothing: grayscale;
+    // }
+
+    ul,
+    li {
+        list-style: none;
+    }
+
+    i,
+    b,
+    address {
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 400;
+    }
+
+    a {
+        color: inherit;
+        -webkit-touch-callout: none;
+        // -webkit-user-select: none;
+    }
+
+    input,
+    textarea,
+    button {
+        -webkit-appearance: none;
+    }
+
+    code {
+        font-family:
+            source-code-pro,
+            Menlo,
+            Monaco,
+            Consolas,
+            "Courier New",
+            monospace;
+    }
+
+    #root {
+        height: 100%;
+    }
+
+    // --bjh-pic-editor-theme-color: #3855d5;
+    // :root {
+    //     // --bjh-pic-editor-theme-color: green;
+    // }
+}

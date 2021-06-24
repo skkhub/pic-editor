@@ -1,0 +1,77 @@
+.toolbar {
+    // outline: 1px solid red;
+    position: absolute;
+    bottom: 18px;
+    left: 24px;
+    display: inline-block;
+    // margin: 0 24px 18px;
+}
+
+.item {
+    position: relative;
+    float: left;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 4px;
+    margin-right: 18px;
+    color: #999baa;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+        line-height: 24px;
+    }
+
+    &.not-allowed {
+        color: #ccc;
+        cursor: not-allowed;
+    }
+
+    &:hover .toolbar-tips {
+        display: block;
+    }
+
+    &.contrast .toolbar-tips::after {
+        content: '长按对比';
+    }
+
+    &.contrast:active .toolbar-tips::after {
+        content: '松开取消';
+    }
+}
+
+.toolbar-tips {
+    display: none;
+    position: absolute;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    line-height: 1;
+    font-size: 12px;
+    top: -40px;
+    // bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    padding: 8px;
+    background-color: #fff;
+    z-index: 10;
+    // box-shadow: 0 -1px 5px 0 rgba(199, 199, 199, 0.50), 0 -5px 13px 0 rgba(215, 215, 215, 0.50);
+    box-shadow: 0 2px 5px 0 rgba(199, 199, 199, 0.36);
+    border-radius: 2px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        margin-left: -6px;
+        // width: 12px;
+        // background: blue;
+        // height: 12px;
+        border: 6px solid transparent;
+        border-top-color: #fff;
+    }
+}

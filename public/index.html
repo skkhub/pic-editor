@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>图片编辑器</title>
+  <style>
+    #root {
+      outline: 1px solid #999;
+      height: 505px;
+      width: 840px;
+      margin-top: 10vh;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <img id='base64-img' src="" alt="">
+  <!-- <img id='blob-img' src="" alt=""> -->
+  <!-- <canvas id='canvas'></canvas> -->
+  <!-- <img id='test-base64' style="outline: 1px solid red;" alt=""> -->
+  <script>
+  //   var canvas = document.getElementById('canvas');
+  //   var ctx = canvas.getContext('2d');
+  //   var img = new Image();
+  //   img.src = 'https://p1.pstatp.com/origin/dfic-imagehandler/fa00d42f-d50e-4439-bab6-2c310e908e1d?timestamp=1608101875695';
+  //   img.crossOrigin = "Anonymous";
+  //   img.onload = function () {
+  //     ctx.drawImage(img, 0, 0);
+  //     var bs = canvas.toDataURL();
+  //     document.getElementById('test-base64').src = bs;
+  //     canvas.toBlob(function(blob) {
+  //       console.log('blob size=', blob);
+  //       var newImg = document.createElement('img'),
+  //           url = URL.createObjectURL(blob);
+  
+  //       newImg.onload = function() {
+  //         // no longer need to read the blob so it's revoked
+  //         URL.revokeObjectURL(url);
+  //       };
+  
+  //       newImg.src = url;
+  //       document.body.appendChild(newImg);
+  //     });
+  //   };
+  // </script>
+</body>
+
+</html>
