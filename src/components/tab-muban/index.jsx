@@ -89,9 +89,9 @@ class TabMuban extends Component {
             2: '热门',
         })[n] + '点击');
     }
-    selectTemp = async (i, temp) => {
+    selectTemp = async (e, i, temp) => {
         // 里边有个button按钮也绑定了click，这里做判断解决冒泡问题
-        if (event.target.tagName.toLowerCase() !== 'img') {
+        if (e.target.tagName.toLowerCase() !== 'img') {
             return;
         }
         if (this.props.curTemp === i) {
@@ -180,7 +180,7 @@ class TabMuban extends Component {
                                     list.map((temp, j) => (
                                         <li
                                             className={this.props.curTemp === `${i}-${j}` ? style['active'] : ''}
-                                            onClick={this.selectTemp.bind(this, `${i}-${j}`, temp)}
+                                            onClick={e => this.selectTemp(e, `${i}-${j}`, temp)}
                                             // style={{backgroundImage: `url(${temp.get('preview')}`}}
                                             key={temp.get('id')}
                                         >

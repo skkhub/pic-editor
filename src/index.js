@@ -9,7 +9,7 @@ import Editor from './main';
 const ce = new Editor('#root', {
     quality: 1, // 设置为jpeg时的压缩比，这个只对jpeg生效，canvas的方式调用toDataurl，默认是0.92的压缩比
     format: 'jpeg', // 点击完成时输出的图片格式
-    theme: '#ff0099',
+    theme: '#ff0000',
     // backgroundColor: 'transparent',
     backgroundColor: '#000', // canvas背景色
     layerColor: 'rgba(0,0,0,0.2)', // 蒙层颜色，目前用在2个地方：元素超出图片区域的地方，裁剪框外
@@ -22,8 +22,8 @@ const ce = new Editor('#root', {
     },
     width: 500, // canvas宽
     height: 281, // canvs高
-    image: 'https://p1.pstatp.com/origin/dfic-imagehandler/fa00d42f-d50e-4439-bab6-2c310e908e1d?timestamp=1608101875695',
-    // image: '', // 除了image可以响应外部的变化外，其余配置目前不做响应
+    // image: 'https://p1.pstatp.com/origin/dfic-imagehandler/fa00d42f-d50e-4439-bab6-2c310e908e1d?timestamp=1608101875695',
+    image: 'https://pic1.zhimg.com/v2-514596bfb7c60cc8c2272f6d3c622331_720w.jpg?source=172ae18b', // 除了image可以响应外部的变化外，其余配置目前不做响应
     cancelText: '取消', // 取消按钮文本
     sureText: '完成', // 完成按钮文本
     cancel: function(a,b,c) {
