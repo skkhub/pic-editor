@@ -19,7 +19,7 @@ class TabWenzi extends Component {
         this.props = props;
     }
     componentDidMount() {
-        post('/pcui/template/gettemplates', {
+        post('/api/pcui/template/gettemplates', {
             type: 'element',
             element: 'font'
         })
@@ -40,7 +40,7 @@ class TabWenzi extends Component {
                 });
             });
 
-        post('/pcui/template/gettemplates', {
+        post('/api/pcui/template/gettemplates', {
             type: 'element',
             element: 'stroke'
         })

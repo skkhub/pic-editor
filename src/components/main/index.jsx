@@ -23,10 +23,10 @@ const IMGURL = 'https://p1.pstatp.com/origin/dfic-imagehandler/fa00d42f-d50e-443
 const WIDTH = 467;
 const HEIGHT = 264;
 // 因这些dom会放到body下，为防止污染，这里命名需要尽量保证全局唯一
-const CANVAS_ID = 'bjh-pic-editor-canvas-' + getUniqueString();
-const LOADING_ID = 'bjh-pic-editor-loading-' + getUniqueString();
-const TOOLBAR_ID = 'bjh-pic-editor-toolbar-' + getUniqueString();
-const BTN_ID = 'bjh-pic-editor-btn-clip-' + getUniqueString();
+const CANVAS_ID = 'pic-editor-canvas-' + getUniqueString();
+const LOADING_ID = 'pic-editor-loading-' + getUniqueString();
+const TOOLBAR_ID = 'pic-editor-toolbar-' + getUniqueString();
+const BTN_ID = 'pic-editor-btn-clip-' + getUniqueString();
 
 class Main extends Component {
     constructor(props) {
@@ -241,10 +241,10 @@ class Main extends Component {
                                     <g id="编组-34" transform="translate(983.000000, 3091.000000)">
                                         <g id="编组-30" transform="translate(7.000000, 5.000000)">
                                             <g id="编组-32" transform="translate(2.000000, 1.000000)">
-                                                <polyline id="路径-5" stroke="#3855D5" strokeWidth="2" points="2 2 2 11 11 11"></polyline>
-                                                <path d="M5.5,3.5 L5.5,4.5 L0.5,4.5 L0.5,3.5 L5.5,3.5 Z" id="矩形" stroke="#3855D5" fill="#D8D8D8"></path>
-                                                <rect id="矩形备份-22" stroke="#3855D5" fill="#D8D8D8" transform="translate(9.000000, 9.500000) rotate(-90.000000) translate(-9.000000, -9.500000) " x="6" y="9" width="6" height="1"></rect>
-                                                <circle id="椭圆形" fill="#3855D5" cx="8.79289322" cy="4.29289322" r="3.5"></circle>
+                                                <polyline id="路径-5" stroke={this.props.theme} strokeWidth="2" points="2 2 2 11 11 11"></polyline>
+                                                <path d="M5.5,3.5 L5.5,4.5 L0.5,4.5 L0.5,3.5 L5.5,3.5 Z" id="矩形" stroke={this.props.theme} fill="#D8D8D8"></path>
+                                                <rect id="矩形备份-22" stroke={this.props.theme} fill="#D8D8D8" transform="translate(9.000000, 9.500000) rotate(-90.000000) translate(-9.000000, -9.500000) " x="6" y="9" width="6" height="1"></rect>
+                                                <circle id="椭圆形" fill={this.props.theme} cx="8.79289322" cy="4.29289322" r="3.5"></circle>
                                                 <polyline id="路径-7" stroke="#FFFFFF" transform="translate(8.922650, 4.483402) rotate(-360.000000) translate(-8.922650, -4.483402) " points="6.87982184 4.07713197 8.51255413 5.70986426 10.9654784 3.25694001"></polyline>
                                             </g>
                                             <rect id="矩形" strokeOpacity="0" stroke="#979797" x="0" y="0" width="16" height="16"></rect>

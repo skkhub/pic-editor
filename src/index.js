@@ -9,9 +9,9 @@ import Editor from './main';
 const ce = new Editor('#root', {
     quality: 1, // 设置为jpeg时的压缩比，这个只对jpeg生效，canvas的方式调用toDataurl，默认是0.92的压缩比
     format: 'jpeg', // 点击完成时输出的图片格式
-    theme: '#ff0000',
+    theme: '#52b311',
     // backgroundColor: 'transparent',
-    backgroundColor: '#000', // canvas背景色
+    backgroundColor: '#666', // canvas背景色
     layerColor: 'rgba(0,0,0,0.2)', // 蒙层颜色，目前用在2个地方：元素超出图片区域的地方，裁剪框外
     track: function (action) { // 打点函数，可以由外部传入
         console.log(action);

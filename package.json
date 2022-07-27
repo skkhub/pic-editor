@@ -1,6 +1,6 @@
 {
   "name": "pic-editor",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "lib/js/main.js",
   "module": "lib/es/main.js",
   "description": "图片编辑器",

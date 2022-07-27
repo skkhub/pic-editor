@@ -43,7 +43,7 @@ class Editor {
         const dom = typeof ele === 'string' ? document.querySelector(ele)
             : ele instanceof HTMLElement ? ele : null;
         if (!dom) {
-            throw Error('请传入正确的dom节点或者id作为bjh-pic-editor的根元素!');
+            throw Error('请传入正确的dom节点或者id作为pic-editor的根元素!');
         }
     
         ReactDOM.render(

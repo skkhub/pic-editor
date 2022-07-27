@@ -36,7 +36,7 @@ class TabMuban extends Component {
         this.setState({
             loading: true
         });
-        let url = '/pcui/template/gettemplates';
+        let url = '/api/pcui/template/gettemplates';
         return post(url, {
             type: 'cover',
             tag: id,
@@ -45,7 +45,7 @@ class TabMuban extends Component {
             res.list = res.list.filter(Boolean);
             for (let temp of res.list) {
                 // 预览原图比较大，加上后缀是在线缩小图片，以更快的加载出来，这里缩小到宽度204
-                temp.preview = temp.preview + '@w_204';
+                // temp.preview = temp.preview + '@w_204';
                 for (let tempItem of temp.element) {
                     if (tempItem.type === 'image') {
                         // 将模板资源中的贴纸src替换为符合当前网页协议的src（当然，前提是贴纸支持http和https都可访问）
@@ -125,7 +125,7 @@ class TabMuban extends Component {
         this.props.track('模板-模板区点击');
     }
     delTemp = (id) => {
-        post('/pcui/template/deltemplate', {tid: id})
+        post('/api/pcui/template/deltemplate', {tid: id})
             .then(res => {
                 let personalTempList = this.props.tempList.get(0).toJS();
                 let index = personalTempList.findIndex(obj => obj.id === id);

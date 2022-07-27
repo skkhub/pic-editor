@@ -39,7 +39,7 @@ class Footer extends Component {
             // 业务上主要用于存储到“我的模板”时，保证预览图不会拉伸的太严重导致的模糊
             const preview = this.props.ce.exportBase64({similarRatio: true});
             const canvasData = this.props.ce.exportObject();
-            let url = await post('/builder/author/picture/process', {
+            let url = await post('/api/picture/process', {
                 action: ['save'],
                 // base64: preview.slice(0, 22)
                 base64: preview.slice(22)
@@ -49,7 +49,7 @@ class Footer extends Component {
                 object: canvasData.objects
             };
             
-            let {id} = await post('/pcui/template/addtemplate', {
+            let {id} = await post('/api/pcui/template/addtemplate', {
                 content: JSON.stringify(result)
             });
 
@@ -58,12 +58,12 @@ class Footer extends Component {
             this.props.message({type: 'success', message:'保存成功，可从“模版-我的”中应用该模版'});
 
             //  保存成功后，请求我的模板数据并更新
-            let {list} = await post('/pcui/template/gettemplates', {
+            let {list} = await post('/api/pcui/template/gettemplates', {
                 type: 'cover',
                 tag: 'personal'
             });
             list = list.filter(Boolean).map(item => {
-                item.preview = item.preview + '@w_204';
+                // item.preview = item.preview + '@w_204';
                 for (let tempItem of item.element) {
                     if (tempItem.type === 'image') {
                         // 将模板资源中的贴纸src替换为符合当前网页协议的src（当然，前提是贴纸支持http和https都可访问）
@@ -187,7 +187,7 @@ class Footer extends Component {
             () => {
                 if (tempId) {
                     // 将使用的模板id上报
-                    post('/pcui/template/recenttemplate', {
+                    post('/api/pcui/template/recenttemplate', {
                         tid: tempId
                     });
                 }

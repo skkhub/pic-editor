@@ -127,7 +127,7 @@ class EditorReact extends Component {
             });
         }
 
-        document.body.style.setProperty('--bjh-pic-editor-theme-color', store.getState().get('canvas').get('theme'));
+        document.body.style.setProperty('--pic-editor-theme-color', store.getState().get('canvas').get('theme'));
     }
 
     // componentWillReceiveProps(nextProps) {
@@ -194,7 +194,7 @@ class EditorReact extends Component {
             this.props.image ?
                 <Provider store={store}>
                     {/* 这里的className是命名空间的作用，不可删去 */}
-                    <div className='bjh-pic-editor' style={{height: '100%'}}>
+                    <div className='pic-editor' style={{height: '100%'}}>
                         <Layout
                             right={<Main image={this.props.image} />}
                             left={<Tabs />}

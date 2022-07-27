@@ -115,7 +115,7 @@ class ColorBox extends Component {
     render() {
         // todo：色值转换16进制为rgb格式
         return (
-            <div className={style['container'] + ' ' + this.props.className} style={this.props.style} data-bjh-pic-editor-keep-open='true'>
+            <div className={style['container'] + ' ' + this.props.className} style={this.props.style} data-pic-editor-keep-open='true'>
                 <ul className={style['color-list']}>
                     {
                         this.state.list.map((color, i) => (

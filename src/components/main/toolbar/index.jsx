@@ -17,7 +17,7 @@ class TextToolbar extends Component {
         // this.toolbar = document.getElementById(this.props.id);
         // this.props.onRef(this);
         document.addEventListener('click', e => {
-            if (e?.path?.find(ele => ele.dataset?.bjhPicEditorKeepOpen)) {
+            if (e?.path?.find(ele => ele.dataset?.picEditorKeepOpen)) {
                 return;
             }
             // 点击所有元素，关闭弹出层，对应地，open方法里要利用setTimeout开启对应的功能
@@ -159,7 +159,7 @@ class TextToolbar extends Component {
                                 </p>
                                 <ul
                                     className={style['toolbar-select'] + ' ' + style['custom-scroll-bar'] + ' ' + (this.state.isOpenFontList ? '' : style['dn'])}
-                                    data-bjh-pic-editor-keep-open='true'
+                                    data-pic-editor-keep-open='true'
                                 >
                                     {
                                         this.props.fontList.map((font, i) => (
@@ -267,7 +267,7 @@ class TextToolbar extends Component {
                         <div className={style['toolbar-tips']}>层级</div>
                         <ul
                             className={style['toolbar-select'] + ' ' + (this.state.isOpenLayer ? '' : style['dn'])}
-                            data-bjh-pic-editor-keep-open='true'
+                            data-pic-editor-keep-open='true'
                         >
                             <li className={style['select-item']} onClick={this.changeIndex.bind(this, 'top')}>置顶</li>
                             <li className={style['select-item']} onClick={this.changeIndex.bind(this, 'bottom')}>置底</li>

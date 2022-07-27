@@ -38,7 +38,7 @@ class TabTiezhi extends Component {
         imgList: []
     }
     componentDidMount() {
-        post('/pcui/template/gettemplates', {
+        post('/api/pcui/template/gettemplates', {
             type: 'element',
             element: 'paster',
         }).then(res => {

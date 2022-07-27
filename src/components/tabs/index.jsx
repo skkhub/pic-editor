@@ -61,7 +61,7 @@ class Tabs extends Component {
                     >
                         <svg
                             style={{
-                                stroke: this.props.tab === MENU.MUBAN ? 'var(--bjh-pic-editor-theme-color)' : iconColor
+                                stroke: this.props.tab === MENU.MUBAN ? 'var(--pic-editor-theme-color)' : iconColor
                             }}
                             width="24px"
                             height="24px"
@@ -91,7 +91,7 @@ class Tabs extends Component {
                         + (this.props.tab === MENU.CAIJIAN && style['active'])}
                         onClick={this.handleClick.bind(this, MENU.CAIJIAN)}
                     >
-                        <svg style={{fill: this.props.tab === MENU.CAIJIAN ? 'var(--bjh-pic-editor-theme-color)' : iconColor}} width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+                        <svg style={{fill: this.props.tab === MENU.CAIJIAN ? 'var(--pic-editor-theme-color)' : iconColor}} width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" >
                             <g id="页面-1" stroke="none" strokeWidth="1" fillRule="evenodd">
                                 <g id="q" transform="translate(-547.000000, -1345.000000)">
                                     <g id="编组-78" transform="translate(523.000000, 897.000000)">
@@ -116,8 +116,8 @@ class Tabs extends Component {
                     >
                         <svg
                             style={{
-                                stroke: this.props.tab === MENU.WENZI ? 'var(--bjh-pic-editor-theme-color)' : iconColor,
-                                fill: this.props.tab === MENU.WENZI ? 'var(--bjh-pic-editor-theme-color)' : iconColor
+                                stroke: this.props.tab === MENU.WENZI ? 'var(--pic-editor-theme-color)' : iconColor,
+                                fill: this.props.tab === MENU.WENZI ? 'var(--pic-editor-theme-color)' : iconColor
                             }}
                             width="24px"
                             height="24px"
@@ -147,7 +147,7 @@ class Tabs extends Component {
                         + (this.props.tab === MENU.TIEZHI && style['active'])}
                         onClick={this.handleClick.bind(this, MENU.TIEZHI)}
                     >
-                        <svg style={{fill: this.props.tab === MENU.TIEZHI ? 'var(--bjh-pic-editor-theme-color)' : iconColor}} width="20px" height="20px" viewBox="0 0 20 20" version="1.1" >
+                        <svg style={{fill: this.props.tab === MENU.TIEZHI ? 'var(--pic-editor-theme-color)' : iconColor}} width="20px" height="20px" viewBox="0 0 20 20" version="1.1" >
                             <g id="svg" stroke="none" strokeWidth="1" fillRule="evenodd">
                                 <g id="贴纸" transform="translate(-2.000000, -2.000000)" fillRule="nonzero">
                                     <path d="M24,0 L0,0 L0,24 L24,24 L24,0 Z M23,1 L23,23 L1,23 L1,1 L23,1 Z" id="矩形备份-5" fillOpacity="0"></path>
@@ -165,7 +165,7 @@ class Tabs extends Component {
                         + (this.props.tab === MENU.LVJING && style['active'])}
                         onClick={this.handleClick.bind(this, MENU.LVJING)}
                     >
-                        <svg style={{fill: this.props.tab === MENU.LVJING ? 'var(--bjh-pic-editor-theme-color)' : iconColor}} width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <svg style={{fill: this.props.tab === MENU.LVJING ? 'var(--pic-editor-theme-color)' : iconColor}} width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <g id="页面-1" stroke="none" strokeWidth="1" fillRule="evenodd">
                                 <g id="q" transform="translate(-548.000000, -1255.000000)">
                                     <g id="编组-78" transform="translate(523.000000, 897.000000)">
